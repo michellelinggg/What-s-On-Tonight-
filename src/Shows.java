@@ -43,13 +43,75 @@ public class Shows {
 		reader = new BufferedReader(new InputStreamReader(url.openStream()));
 		line = reader.readLine();
 		while (line != null){
+			if (line.equals("                    <h6 id=\"7 pm\">7 pm</h6>")){
+				Document document = Jsoup.parse(line);
+				Elements headers = document.select("h6");
+				System.out.println();
+				for (Element header : headers) 
+				    System.out.println(header.ownText() + ":");
+				}
+			if (line.equals("                    <h6 id=\"7:30 pm\">7:30 pm</h6>")){
+				Document document = Jsoup.parse(line);
+				Elements headers = document.select("h6");
+				System.out.println();
+				for (Element header : headers) 
+				    System.out.println(header.ownText() + ":");
+				}
+			if (line.equals("                    <h6 id=\"8 pm\">8 pm</h6>")){
+				Document document = Jsoup.parse(line);
+				Elements headers = document.select("h6");
+				System.out.println();
+				for (Element header : headers) 
+				    System.out.println(header.ownText() + ":");
+				}
+			if (line.equals("                    <h6 id=\"8:30 pm\">8:30 pm</h6>")){
+				Document document = Jsoup.parse(line);
+				Elements headers = document.select("h6");
+				System.out.println();
+				for (Element header : headers) 
+				    System.out.println(header.ownText() + ":");
+				}
+			if (line.equals("                    <h6 id=\"9 pm\">9 pm</h6>")){
+				Document document = Jsoup.parse(line);
+				Elements headers = document.select("h6");
+				System.out.println();
+				for (Element header : headers) 
+				    System.out.println(header.ownText() + ":");
+				}
+			if (line.equals("                    <h6 id=\"9:30 pm\">9:30 pm</h6>")){
+				Document document = Jsoup.parse(line);
+				Elements headers = document.select("h6");
+				System.out.println();
+				for (Element header : headers) 
+				    System.out.println(header.ownText() + ":");
+				}
+			if (line.equals("                    <h6 id=\"10 pm\">10 pm</h6>")){
+					Document document = Jsoup.parse(line);
+					Elements headers = document.select("h6");
+					System.out.println();
+					for (Element header : headers) 
+					    System.out.println(header.ownText() + ":");
+				}
+			if (line.equals("                    <h6 id=\"10:30 pm\">10:30 pm</h6>")){
+				Document document = Jsoup.parse(line);
+			    Elements headers = document.select("h6");
+			    System.out.println();
+			    for (Element header : headers) 
+			        System.out.println(header.ownText() + ":");
+			}
+			if (line.equals("                    <h6 id=\"11 pm\">11 pm</h6>")){
+				Document document = Jsoup.parse(line);
+			    Elements headers = document.select("h6");
+			    System.out.println();
+			    for (Element header : headers) 
+			        System.out.println(header.ownText() + ":");
+			}
 			if (line.equals("                                <h3>")){
 				line = reader.readLine();
 				Document document = Jsoup.parse(line);
 			    Elements headers = document.select("a");
-			    for (Element header : headers) {
+			    for (Element header : headers) 
 			        System.out.println(header.ownText());
-			    }
 			}
 			line = reader.readLine();
 		}
@@ -61,3 +123,4 @@ public class Shows {
 	}
 	
 }
+		
